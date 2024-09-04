@@ -179,6 +179,12 @@ variable "service_account_create" {
   default     = false
 }
 
+variable "trigger_service_account_create" {
+  description = "Auto-create trigger service account."
+  type        = bool
+  default     = false
+}
+
 variable "trigger_config" {
   description = "Function trigger configuration. Leave null for HTTP trigger."
   type = object({

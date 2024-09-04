@@ -31,7 +31,7 @@ locals {
     : var.service_account
   )
   trigger_sa_create = (
-    try(var.trigger_config.service_account_create, false) == true
+    try(var.trigger_service_account_create, false) == true
   )
   trigger_sa_email = try(
     google_service_account.trigger_service_account[0].email,
